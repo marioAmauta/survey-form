@@ -1,0 +1,146 @@
+:root {
+  --form-color: rgb(0 255 248);
+  --form-background-color: rgb(30 6 35 / 50%);
+  --input-and-button-color: rgb(226 177 177 / 80%);
+  --input-and-button-background-color: rgb(163 23 129 / 25%);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+  background-color: #330033;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%23404' stroke-width='5'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23505'%3E%3Ccircle cx='769' cy='229' r='10'/%3E%3Ccircle cx='539' cy='269' r='10'/%3E%3Ccircle cx='603' cy='493' r='10'/%3E%3Ccircle cx='731' cy='737' r='10'/%3E%3Ccircle cx='520' cy='660' r='10'/%3E%3Ccircle cx='309' cy='538' r='10'/%3E%3Ccircle cx='295' cy='764' r='10'/%3E%3Ccircle cx='40' cy='599' r='10'/%3E%3Ccircle cx='102' cy='382' r='10'/%3E%3Ccircle cx='127' cy='80' r='10'/%3E%3Ccircle cx='370' cy='105' r='10'/%3E%3Ccircle cx='578' cy='42' r='10'/%3E%3Ccircle cx='237' cy='261' r='10'/%3E%3Ccircle cx='390' cy='382' r='10'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--form-color);
+}
+
+label {
+  display: block;
+}
+
+.header {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+#title {
+  font-weight: 400;
+  font-size: 2rem;
+  text-align: center;
+}
+
+#description {
+  font-style: italic;
+  font-size: 1.1rem;
+  letter-spacing: 0.01rem;
+}
+
+#survey-form {
+  margin: 1rem auto 2rem auto;
+  padding: 1.5rem;
+  width: 85%;
+  background: var(--form-background-color);
+  border-radius: 1rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(0.1rem);
+  border: 1px solid rgba(159, 0, 117, 0.7);
+}
+
+.form-group {
+  padding: 1rem 0;
+  border: none;
+}
+
+.form-group label {
+  margin-bottom: .5rem;
+}
+
+.multiple-options label {
+  color: #f8a5a5;
+}
+
+.form-control,
+.input-textarea {
+  font-size: 1.2rem;
+  font-family: inherit;
+  width: 100%;
+  color: var(--input-and-button-color);
+  background-color: var(--input-and-button-background-color);
+  border-radius: 0.5rem;
+  outline: 0 none;
+}
+
+.form-control {
+  padding: .2rem .5rem;
+  border: none;
+}
+
+.input-textarea {
+  padding: 0.7rem;
+  min-height: 7.5rem;
+  resize: vertical;
+}
+
+.form-control::placeholder,
+.input-textarea::placeholder {
+  color: var(--input-and-button-color);
+}
+
+.input-radio,
+.input-checkbox {
+  transform: scale(1.4);
+  margin: 0 0.5rem 0 0.2rem;
+  color: var(--input-and-button-color);
+}
+
+.submit-btn {
+  font-size: inherit;
+  background-color: var(--input-and-button-background-color);
+  width: 100%;
+  padding: 0.5rem;
+  color: inherit;
+  border-radius: 0.5rem;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 600px) {
+  #survey-form {
+    width: 70%;
+  }
+
+}
+
+@media screen and (min-width: 800px) {
+  #survey-form {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #survey-form {
+    width: 50%;
+  }
+}
