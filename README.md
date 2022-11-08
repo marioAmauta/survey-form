@@ -1,2 +1,2 @@
 # survey-form
-freeCodeCamp survey form project for responsive web design certification
+Survey form site project for freeCodeCamp responsive web design certification
