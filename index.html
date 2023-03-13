@@ -1,128 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <title>Survey Form</title>
-</head>
-
-<body>
-  <header class="header">
-    <h1 id="title">Survey Form</h1>
-    <p id="description">Thank you for taking the time to help us improve the platform</p>
-  </header>
-  <form id="survey-form">
-    <fieldset class="form-group">
-      <label for="name" id="name-label">Name</label>
-      <input class="form-control" type="text" name="name" id="name" placeholder="Enter your name" required />
-    </fieldset>
-    <fieldset class="form-group">
-      <label for="email" id="email-label">Email</label>
-      <input class="form-control" type="email" name="email" id="email" placeholder="Enter your email" required />
-    </fieldset>
-    <fieldset class="form-group">
-      <label for="number" id="number-label">Age</label>
-      <input class="form-control" type="number" name="number" id="number" placeholder="Enter your age" min="18" max="80"
-        required />
-    </fieldset>
-    <fieldset class="form-group">
-      <label for="dropdown">Which option best describes your current role?</label>
-      <select class="form-control" name="dropdown" id="dropdown">
-        <option value="current-role" selected disabled>Select current role</option>
-        <option value="student">Student</option>
-        <option value="full-time-job">Full Time Job</option>
-        <option value="full-time-learner">Full Time Learner</option>
-        <option value="prefer-not-to-say">Prefer not to say</option>
-        <option value="other">Other</option>
-      </select>
-    </fieldset>
-    <fieldset class="form-group multiple-options">
-      <legend>Would you recommend freeCodeCamp to a friend?</legend>
-      <label>
-        <input class="input-radio" type="radio" name="user-radio" value="definitely" checked />
-        Definitely
-      </label>
-      <label>
-        <input class="input-radio" type="radio" name="user-radio" value="maybe" />
-        <span>Maybe</span>
-      </label>
-      <label>
-        <input class="input-radio" type="radio" name="user-radio" value="not-sure" />
-        Not Sure
-      </label>
-    </fieldset>
-    <fieldset class="form-group">
-      <label for="dropdown2">What is your favorite feature of freeCodeCamp?</label>
-      <select class="form-control" name="dropdown2" id="dropdown2">
-        <option value="select-option" selected disabled>Select an option</option>
-        <option value="challenges">Challenges</option>
-        <option value="projects">Projects</option>
-        <option value="community">Community</option>
-        <option value="open-source">Open Source</option>
-      </select>
-    </fieldset>
-    <fieldset class="form-group multiple-options">
-      <legend>What would you like to see improved?</legend>
-      <label>
-        <input class="input-checkbox" type="checkbox" name="checkbox-option" value="front-end-projects" />
-        Front-end Projects
-      </label>
-      <label>
-        <input class="input-checkbox" type="checkbox" name="checkbox-option" value="Back-end-projects" />
-        Back-end Projects
-      </label>
-      <label>
-        <input class="input-checkbox" type="checkbox" name="checkbox-option" value="data-visualization" />
-        Data Visualization
-      </label>
-      <label>
-        <input class="input-checkbox" type="checkbox" name="checkbox-option" value="challenges" />
-        Challenges
-      </label>
-      <label>
-        <input class="input-checkbox" type="checkbox" name="checkbox-option" value="open-source-community" />
-        Open Source Community
-      </label>
-      <label>
-        <input class="input-checkbox" type="checkbox" name="checkbox-option" value="gitter-help-rooms" />
-        Gitter help rooms
-      </label>
-      <label>
-        <input class="input-checkbox" type="checkbox" name="checkbox-option" value="videos" />
-        Videos
-      </label>
-      <label>
-        <input class="input-checkbox" type="checkbox" name="checkbox-option" value="city-meetups" />
-        City Meetups
-      </label>
-      <label>
-        <input class="input-checkbox" type="checkbox" name="checkbox-option" value="wiki" />
-        Wiki
-      </label>
-      <label>
-        <input class="input-checkbox" type="checkbox" name="checkbox-option" value="forum" />
-        Forum
-      </label>
-      <label>
-        <input class="input-checkbox" type="checkbox" name="checkbox-option" value="additional-courses" />
-        Additional Courses
-      </label>
-    </fieldset>
-    <fieldset class="form-group">
-      <legend>Any comments or suggestions?</legend>
-      <textarea class="input-textarea" name="comments-suggestions" id="comments-suggestions"
-        placeholder="Enter your comment here..."></textarea>
-    </fieldset>
-    <fieldset class="form-group">
-      <input class="submit-btn" id="submit" type="submit" value="Submit" />
-    </fieldset>
-  </form>
-</body>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="IE=edge"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="styles.css"
+    />
+    <title>Survey Form</title>
+    <meta
+      name="theme-color"
+      content="#000355"
+    />
+    <meta
+      name="description"
+      content="freeCodeCamp Survey Form project for Responsive Web Design Certification"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <h1 id="title">Survey Form</h1>
+      <p id="description">Thank you for taking the time to help us improve the platform</p>
+    </header>
+    <main>
+      <form id="survey-form">
+        <fieldset class="form-group">
+          <label
+            for="name"
+            id="name-label"
+            >Name</label
+          >
+          <input
+            class="form-control"
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your name"
+            required
+          />
+        </fieldset>
+        <fieldset class="form-group">
+          <label
+            for="email"
+            id="email-label"
+            >Email</label
+          >
+          <input
+            class="form-control"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+        </fieldset>
+        <fieldset class="form-group">
+          <label
+            for="number"
+            id="number-label"
+            >Age</label
+          >
+          <input
+            class="form-control"
+            type="number"
+            name="number"
+            id="number"
+            placeholder="Enter your age"
+            min="18"
+            max="80"
+            required
+          />
+        </fieldset>
+        <fieldset class="form-group">
+          <label for="dropdown">Which option best describes your current role?</label>
+          <select
+            class="form-control"
+            name="dropdown"
+            id="dropdown"
+          >
+            <option
+              value="current-role"
+              selected
+              disabled
+            >
+              Select current role
+            </option>
+            <option value="student">Student</option>
+            <option value="full-time-job">Full Time Job</option>
+            <option value="full-time-learner">Full Time Learner</option>
+            <option value="prefer-not-to-say">Prefer not to say</option>
+            <option value="other">Other</option>
+          </select>
+        </fieldset>
+        <fieldset class="form-group multiple-options">
+          <label>Would you recommend freeCodeCamp to a friend?</label>
+          <label class="radio-check-label">
+            <input
+              class="input-radio"
+              type="radio"
+              name="user-radio"
+              value="definitely"
+              checked
+            />
+            <span>Definitely</span>
+          </label>
+          <label class="radio-check-label">
+            <input
+              class="input-radio"
+              type="radio"
+              name="user-radio"
+              value="maybe"
+            />
+            <span>Maybe</span>
+          </label>
+          <label class="radio-check-label">
+            <input
+              class="input-radio"
+              type="radio"
+              name="user-radio"
+              value="not-sure"
+            />
+            <span>Not Sure</span>
+          </label>
+        </fieldset>
+        <fieldset class="form-group">
+          <label for="dropdown2">What is your favorite feature of freeCodeCamp?</label>
+          <select
+            class="form-control"
+            name="dropdown2"
+            id="dropdown2"
+          >
+            <option
+              value="select-option"
+              selected
+              disabled
+            >
+              Select an option
+            </option>
+            <option value="challenges">Challenges</option>
+            <option value="projects">Projects</option>
+            <option value="community">Community</option>
+            <option value="open-source">Open Source</option>
+          </select>
+        </fieldset>
+        <fieldset class="form-group multiple-options">
+          <label>What would you like to see improved?</label>
+          <label class="radio-check-label">
+            <input
+              class="input-checkbox"
+              type="checkbox"
+              name="checkbox-option"
+              value="front-end-projects"
+            />
+            <span>Front-end Projects</span>
+          </label>
+          <label class="radio-check-label">
+            <input
+              class="input-checkbox"
+              type="checkbox"
+              name="checkbox-option"
+              value="Back-end-projects"
+            />
+            <span>Back-end Projects</span>
+          </label>
+          <label class="radio-check-label">
+            <input
+              class="input-checkbox"
+              type="checkbox"
+              name="checkbox-option"
+              value="data-visualization"
+            />
+            <span>Data Visualization</span>
+          </label>
+          <label class="radio-check-label">
+            <input
+              class="input-checkbox"
+              type="checkbox"
+              name="checkbox-option"
+              value="challenges"
+            />
+            <span>Challenges</span>
+          </label>
+          <label class="radio-check-label">
+            <input
+              class="input-checkbox"
+              type="checkbox"
+              name="checkbox-option"
+              value="open-source-community"
+            />
+            <span>Open Source Community</span>
+          </label>
+          <label class="radio-check-label">
+            <input
+              class="input-checkbox"
+              type="checkbox"
+              name="checkbox-option"
+              value="videos"
+            />
+            <span>Videos</span>
+          </label>
+          <label class="radio-check-label">
+            <input
+              class="input-checkbox"
+              type="checkbox"
+              name="checkbox-option"
+              value="city-meetups"
+            />
+            <span>City Meetups</span>
+          </label>
+          <label class="radio-check-label">
+            <input
+              class="input-checkbox"
+              type="checkbox"
+              name="checkbox-option"
+              value="wiki"
+            />
+            <span>Wiki</span>
+          </label>
+          <label class="radio-check-label">
+            <input
+              class="input-checkbox"
+              type="checkbox"
+              name="checkbox-option"
+              value="forum"
+            />
+            <span>Forum</span>
+          </label>
+          <label class="radio-check-label">
+            <input
+              class="input-checkbox"
+              type="checkbox"
+              name="checkbox-option"
+              value="additional-courses"
+            />
+            <span>Additional Courses</span>
+          </label>
+        </fieldset>
+        <fieldset class="form-group">
+          <label>Any comments or suggestions?</label>
+          <textarea
+            class="input-textarea"
+            name="comments-suggestions"
+            id="comments-suggestions"
+            placeholder="Enter your comment here..."
+          ></textarea>
+        </fieldset>
+        <fieldset class="form-group">
+          <input
+            class="submit-btn"
+            id="submit"
+            type="submit"
+            value="Submit"
+          />
+        </fieldset>
+      </form>
+    </main>
+  </body>
 </html>
